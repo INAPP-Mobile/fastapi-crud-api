@@ -1,0 +1,26 @@
+[project]
+name = "fastapi-crud-api"
+version = "1.0.0"
+description = "A production-grade FastAPI + SQLModel CRUD API template"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "sqlmodel>=0.0.22",
+    "psycopg2-binary>=2.9.9",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+dependencies = [
+    "pytest>=8.0.0",
+    "httpx>=0.27.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
