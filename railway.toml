@@ -6,3 +6,6 @@
   start_command = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
   healthcheck_path = "/health"
   restarter = "always"
+
+[service]
+  autoscaling = false
